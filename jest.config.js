@@ -9,4 +9,8 @@ const customJestConfig = {
   setupFilesAfterEnv: ["<rootDir>/.jest/setup.ts"],
 };
 
-module.exports = createJestConfig(customJestConfig);
+// Added async await and transformIgnorePatterns to fix jest unexpected token export syntax error
+module.exports = async () => ({
+  ...(await createJestConfig(customJestConfig)()),
+  transformIgnorePatterns: ["!node_modules/", "!.next/"],
+});
