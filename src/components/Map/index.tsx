@@ -1,16 +1,18 @@
 import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
 
-interface MapProps {
-  places?: {
-    id: string;
-    name: string;
-    slug: string;
-    location: {
-      latitude: number;
-      longitude: number;
-    };
-  }[];
-}
+type Place = {
+  id: string;
+  name: string;
+  slug: string;
+  location: {
+    latitude: number;
+    longitude: number;
+  };
+};
+
+export type MapProps = {
+  places?: Place[];
+};
 
 const Map = ({ places }: MapProps) => (
   <MapContainer
