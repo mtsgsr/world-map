@@ -1,6 +1,7 @@
 lockfileVersion: 5.4
 
 specifiers:
+  '@styled-icons/evaicons-outline': ^10.46.0
   '@testing-library/jest-dom': ^5.16.5
   '@testing-library/react': ^14.0.0
   '@types/jest': ^29.4.0
@@ -29,6 +30,7 @@ specifiers:
   typescript: ^4.9.5
 
 dependencies:
+  '@styled-icons/evaicons-outline': 10.46.0_4u4prsbu4xebiu2l7anbiurhfq
   leaflet: 1.9.3
   next: 13.2.3_biqbaboplfbrettd7655fr4n2y
   react: 18.2.0
@@ -365,7 +367,6 @@ packages:
     engines: {node: '>=6.9.0'}
     dependencies:
       regenerator-runtime: 0.13.11
-    dev: true
 
   /@babel/template/7.20.7:
     resolution: {integrity: sha512-8SegXApWe6VoNw0r9JHpSteLKTpTiLZ4rMlGIm9JQ18KiCtyQiAMEazujAHrUS5flrcqYZa75ukev3P6QmUwUw==}
@@ -931,6 +932,29 @@ packages:
     dependencies:
       '@sinonjs/commons': 2.0.0
     dev: true
+
+  /@styled-icons/evaicons-outline/10.46.0_4u4prsbu4xebiu2l7anbiurhfq:
+    resolution: {integrity: sha512-+tHb/Ir6G1e+rSJ2YKgm2vzjF80JoXWEmoC48exFrQEKQkJPSWtsqKdROkfANKrY9AFnRKhJQ+9fHhnjS+V/OA==}
+    peerDependencies:
+      react: '*'
+      styled-components: '*'
+    dependencies:
+      '@babel/runtime': 7.21.0
+      '@styled-icons/styled-icon': 10.7.0_4u4prsbu4xebiu2l7anbiurhfq
+      react: 18.2.0
+      styled-components: 5.3.8_biqbaboplfbrettd7655fr4n2y
+    dev: false
+
+  /@styled-icons/styled-icon/10.7.0_4u4prsbu4xebiu2l7anbiurhfq:
+    resolution: {integrity: sha512-SCrhCfRyoY8DY7gUkpz+B0RqUg/n1Zaqrr2+YKmK/AyeNfCcoHuP4R9N4H0p/NA1l7PTU10ZkAWSLi68phnAjw==}
+    peerDependencies:
+      react: '*'
+      styled-components: '>=4.1.0 <6'
+    dependencies:
+      '@babel/runtime': 7.21.0
+      react: 18.2.0
+      styled-components: 5.3.8_biqbaboplfbrettd7655fr4n2y
+    dev: false
 
   /@swc/helpers/0.4.14:
     resolution: {integrity: sha512-4C7nX/dvpzB7za4Ql9K81xK3HPxCpHMgwTZVyf+9JQ6VUbn9jjZVN7/Nkdz/Ugzs2CSjqnL/UPXroiVBVHUWUw==}
@@ -4280,7 +4304,6 @@ packages:
 
   /regenerator-runtime/0.13.11:
     resolution: {integrity: sha512-kY1AZVr2Ra+t+piVaJ4gxaFaReZVH40AKNo7UCX6W+dEwBo/2oZJzqfuN1qLq1oL45o56cPaTXELwrTh8Fpggg==}
-    dev: true
 
   /regexp.prototype.flags/1.4.3:
     resolution: {integrity: sha512-fjggEOO3slI6Wvgjwflkc4NFRCTZAu5CnNfBd5qOMYhWdn67nJBBu34/TkD++eeFmd8C9r9jfXJ27+nSiRkSUA==}
