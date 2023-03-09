@@ -1,17 +1,23 @@
+import { GetStaticProps } from "next";
+import { useRouter } from "next/router";
+
+import Loading from "@/components/Loading";
+
 import client from "@/graphql/client";
 import {
   GetPlaceBySlugQuery,
   GetPlacesQuery,
 } from "@/graphql/generated/graphql";
 import { GET_PLACES, GET_PLACE_BY_SLUG } from "@/graphql/queries";
+
 import PlaceTemplate, { PlaceTemplateProps } from "@/templates/Places";
-import { GetStaticProps } from "next";
-import { useRouter } from "next/router";
 
 export default function Place({ place }: PlaceTemplateProps) {
   const router = useRouter();
 
-  if (router.isFallback) return null;
+  if (router.isFallback) {
+    return <Loading />;
+  }
 
   return <PlaceTemplate place={place} />;
 }
