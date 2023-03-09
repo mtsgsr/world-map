@@ -9,14 +9,14 @@ import { GET_PAGES, GET_PAGE_BY_SLUG } from "@/graphql/queries";
 
 import PageTemplate, { PageTemplateProps } from "@/templates/Pages";
 
-export default function Page({ heading, body }: PageTemplateProps) {
+export default function Page({ page }: PageTemplateProps) {
   const router = useRouter();
 
   if (router.isFallback) {
     return <Loading />;
   }
 
-  return <PageTemplate heading={heading} body={body} />;
+  return <PageTemplate page={page} />;
 }
 
 export async function getStaticPaths() {
@@ -41,8 +41,7 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
 
   return {
     props: {
-      heading: page.heading,
-      body: page.body.html,
+      page,
     },
   };
 };

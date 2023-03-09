@@ -3,11 +3,12 @@ import Head from "next/head";
 
 import GlobalStyles from "@/styles/global";
 
+import { DefaultSeo } from "next-seo";
+
 function MyApp({ Component, pageProps }: AppProps) {
   return (
     <>
       <Head>
-        <title>World Map</title>
         <link rel="icon" href="/favicon.ico" />
         <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
         <link
@@ -16,9 +17,20 @@ function MyApp({ Component, pageProps }: AppProps) {
           integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI="
           crossorigin=""
         />
-        <meta name="description" content="A world map project" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
+      <DefaultSeo
+        openGraph={{
+          type: "website",
+          locale: "pt_BR",
+          url: "https://mtsgsr-worldmap.vercel.app/",
+          siteName: "World Map",
+        }}
+        twitter={{
+          handle: "@mtsgsr",
+          site: "@site",
+          cardType: "summary_large_image",
+        }}
+      />
       <GlobalStyles />
       <Component {...pageProps} />
     </>
