@@ -4,8 +4,3 @@ documents: "src/graphql/queries.ts"
 generates:
   src/graphql/generated/:
     preset: "client"
-    plugins: 
-      - typescript
-      - typescript-operations
-      - add: 
-          content: "/* eslint-disable */"
